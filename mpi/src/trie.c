@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <errorno.h>
-
 #include "../includes/trie.h"
 
 struct trie_node *get_node() {

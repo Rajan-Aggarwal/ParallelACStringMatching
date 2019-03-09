@@ -9,7 +9,7 @@
 struct trie_node {
 	struct trie_node *children[ASCII_SET_SZ];
 	int is_leaf;
-}
+};
 
 struct trie_node *get_node(); 
 
