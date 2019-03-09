@@ -5,6 +5,7 @@
 #define TRUE !FALSE
 
 #define ASCII_SET_SZ 128
+#define MAX_STR_LEN 100
 
 struct trie_node {
 	struct trie_node *children[ASCII_SET_SZ]; // only one can have non-null value
@@ -14,7 +15,7 @@ struct trie_node {
 struct trie_node *get_node(); // memory allocation
 
 /*
-	struct root = get_node(); to initialize the trie
+	use struct root = get_node(); to initialize the trie
 */
 
 void insert_pattern(struct trie_node *root, char *pattern); 
