@@ -15,7 +15,6 @@ struct trie_node *get_node();
 
 void insert_pattern(struct trie_node *root, char *pattern); 
 
-void string_matching(struct trie_node *root, char *string, int start_index); //look for any pattern match and print
 
 #endif /* __TRIE_H */
 

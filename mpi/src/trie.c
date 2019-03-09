@@ -37,3 +37,5 @@ void insert_pattern(struct trie_node *root, char *pattern) {
 
 
 
+
+
