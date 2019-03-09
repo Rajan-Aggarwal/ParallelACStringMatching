@@ -7,14 +7,17 @@
 #define ASCII_SET_SZ 128
 
 struct trie_node {
-	struct trie_node *children[ASCII_SET_SZ];
-	int is_leaf;
+	struct trie_node *children[ASCII_SET_SZ]; // only one can have non-null value
+	int is_leaf; // denotes end of a word or pattern matched
 };
 
-struct trie_node *get_node(); 
+struct trie_node *get_node(); // memory allocation
+
+/*
+	struct root = get_node(); to initialize the trie
+*/
 
 void insert_pattern(struct trie_node *root, char *pattern); 
-
 
 #endif /* __TRIE_H */
 
