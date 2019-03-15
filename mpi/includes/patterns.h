@@ -25,6 +25,6 @@ const char *pattern_list[] = {
 	".php",
 	".py",
 	".sh"
-}
+};
 
 #endif /* __PATTERNS_H */

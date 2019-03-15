@@ -18,7 +18,7 @@ struct trie_node *get_node() {
 	return newnode;
 }
 
-void insert_pattern(struct trie_node *root, char *pattern) {
+void insert_pattern(struct trie_node *root, const char *pattern) {
 	struct trie_node *cursor = root;
 	int len = strlen(pattern);
 
