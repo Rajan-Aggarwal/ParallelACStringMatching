@@ -15,13 +15,13 @@ void detect_patterns(struct trie_node *root, char *input, int start) {
 
 	for (int i=start; i<len; i++) {
 		int index = (int)input[i];
-		if (cursor->is_leaf) {
-			printf("Pattern %s has been found!\n", buffer);
-			return;
-		}
-		else if (cursor->children[index]) {
+		if (cursor->children[index]) {
 			buffer[bufcount++] = input[i];
 			cursor = cursor->children[index];
+			if (cursor->is_leaf) {
+				printf("Pattern %s has been found!\n", buffer);
+				return;
+			}
 		} 
 		else return;
 	}
