@@ -15,7 +15,7 @@ struct trie_node {
 struct trie_node *get_node(); // memory allocation
 
 /*
-	use struct root = get_node(); to initialize the trie
+	use struct trie_node *root = get_node(); to initialize the trie
 */
 
 void insert_pattern(struct trie_node *root, char *pattern); 
