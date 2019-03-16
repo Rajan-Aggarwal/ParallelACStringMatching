@@ -1,3 +1,12 @@
+/**
+* Author: 	Rajan
+* File: 	main.c
+* Purpose: 	Brings the entire project together. Inits a trie, 
+* 			adds patterns to it, reads the input file
+* 			detect patterns given in patterns.h (if any)
+* 			and prints them stdout
+**/
+
 #include <stdio.h> 
 #include <stdlib.h>
 #include <string.h>
@@ -14,6 +23,9 @@
 const char 	*input_file_path 	= "../files/input_stream.txt";
 const size_t NUMBER_OF_PATTERNS = sizeof(pattern_list) / sizeof(char *);
 
+/**
+* This function adds patterns to the initialized trie
+**/
 struct trie_node *add_patterns(struct trie_node *root) {
 	for (int i=0; i<NUMBER_OF_PATTERNS; i++) {
 		insert_pattern(root, pattern_list[i]);

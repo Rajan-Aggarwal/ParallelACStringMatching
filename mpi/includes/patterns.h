@@ -1,3 +1,10 @@
+/**
+* Author: 	Rajan
+* File: 	patterns.h
+* Purpose: 	contains all the patterns that are detected by the 
+*			accelerated AC string matching algorithm
+**/
+
 #ifndef __PATTERNS_H
 #define __PATTERNS_H
 

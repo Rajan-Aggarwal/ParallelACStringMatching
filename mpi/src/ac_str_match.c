@@ -1,3 +1,10 @@
+/**
+* Author: 	Rajan
+* File: 	ac_str_match.c
+* Purpose: 	src file for the implementation of the accelerated 
+*			AC string matching algorithm
+**/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

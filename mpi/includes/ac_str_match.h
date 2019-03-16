@@ -1,3 +1,10 @@
+/**
+* Author: 	Rajan
+* File: 	ac_str_match.h
+* Purpose: 	header file for the implementation of accelerated 
+*			AC string matching algorithm	
+**/
+
 #ifndef __AC_STR_MATCH_H
 #define __AC_STR_MATCH_H
 

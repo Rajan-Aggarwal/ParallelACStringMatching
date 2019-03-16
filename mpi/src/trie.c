@@ -1,3 +1,10 @@
+/**
+* Author: 	Rajan
+* File: 	trie.c
+* Purpose: 	src file for the implementation of a basic trie 
+*			(without backtracking functionality)
+**/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
