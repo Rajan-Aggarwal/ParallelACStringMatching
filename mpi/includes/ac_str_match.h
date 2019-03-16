@@ -3,6 +3,10 @@
 
 #define MAX_STR_LEN 100
 
-void detect_patterns(struct trie_node *root, const char *input, int start); // outputs all the matched patterns to stdout
+/**
+* This function takes in a trie and an input buffer and parses the input from start to finish
+* to detect patterns and, outputs patterns to stdout.
+**/
+void detect_patterns(struct trie_node *root, char *input, int start); 
 
 #endif /* __AC_STR_MATCH_H */

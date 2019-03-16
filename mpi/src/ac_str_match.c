@@ -5,7 +5,7 @@
 #include "../includes/trie.h"
 #include "../includes/ac_str_match.h"
 
-void detect_patterns(struct trie_node *root, const char *input, int start) {
+void detect_patterns(struct trie_node *root, char *input, int start) {
 	int len = strlen(input);
 
 	char buffer[MAX_STR_LEN];

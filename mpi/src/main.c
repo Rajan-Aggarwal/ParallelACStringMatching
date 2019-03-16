@@ -2,11 +2,16 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include <mpi.h>
+
 #include "../includes/trie.h"
 #include "../includes/ac_str_match.h"
 
 #include "../includes/patterns.h"
 
+#define MAX_INPUT_SZ 500
+
+const char 	*input_file_path 	= "../files/input_stream.txt";
 const size_t NUMBER_OF_PATTERNS = sizeof(pattern_list) / sizeof(char *);
 
 struct trie_node *add_patterns(struct trie_node *root) {
@@ -17,7 +22,29 @@ struct trie_node *add_patterns(struct trie_node *root) {
 }
 
 int main(int argc, char *argv[]) {
-	struct trie_node *root = get_node();
-	add_patterns(root);
+
+	struct trie_node *root = get_node(); 									// initialize a trie
+	add_patterns(root); 													// add patterns from the header file
+
+	char *input_buffer = (char *)malloc(sizeof(char) * MAX_INPUT_SZ);		// initialize buffer
+	FILE *fhandle = fopen(input_file_path, "r");							// open file as read-only
+	size_t ret = fread(input_buffer, sizeof(char), MAX_INPUT_SZ, fhandle); 	// read file into the buffer  
+
+	if (MPI_Init(&argc, &argv) != MPI_SUCCESS) {
+		fprintf(stderr, "Unable to initialize MPI\n");
+	}
+
+	int rank;
+	int size;
+
+	MPI_Comm_rank(MPI_COMM_WORLD, &rank); 				// get rank of the process
+	MPI_Comm_size(MPI_COMM_WORLD, &size); 				// get number of processes
+
+	if (rank < ret) {
+		detect_patterns(root, input_buffer, rank); 		// allot each character to each rank 
+	}
+
+	MPI_Finalize();
+
 	return 0;
 }
