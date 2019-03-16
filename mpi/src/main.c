@@ -13,10 +13,10 @@
 
 #include <mpi.h>
 
-#include "../includes/trie.h"
-#include "../includes/ac_str_match.h"
+#include "../include/trie.h"
+#include "../include/ac_str_match.h"
 
-#include "../includes/patterns.h"
+#include "../include/patterns.h"
 
 #define MAX_INPUT_SZ 500
 

@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "../includes/trie.h"
+#include "../include/trie.h"
 
 struct trie_node *get_node() {
 	struct trie_node *newnode = NULL;
