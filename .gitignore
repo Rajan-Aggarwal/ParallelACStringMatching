@@ -1,2 +1,4 @@
 test/
 mpi/src/output
+mpi/bin
+mpi/obj
