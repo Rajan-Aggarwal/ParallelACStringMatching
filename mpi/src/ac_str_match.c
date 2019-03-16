@@ -26,6 +26,7 @@ void detect_patterns(struct trie_node *root, char *input, int start) {
 			buffer[bufcount++] = input[i];
 			cursor = cursor->children[index];
 			if (cursor->is_leaf) {
+				buffer[bufcount] = '\0';
 				printf("Pattern %s has been found!\n", buffer);
 				return;
 			}
