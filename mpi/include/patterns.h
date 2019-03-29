@@ -15,23 +15,6 @@
 *		3. Any executable
 **/
 
-const char *pattern_list[] = {
-	// 1.
-	"bash -i >& /dev/tcp/",
-	"subprocess.call",
-	"sprintf",
-	"exec",
-	"nc",
-
-	// 2.
-	"/bin",
-	"/sh",
-
-	// 3.
-	".pl",
-	".php",
-	".py",
-	".sh"
-};
+extern const *pattern_list[];
 
 #endif /* __PATTERNS_H */

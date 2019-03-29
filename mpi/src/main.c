@@ -24,6 +24,32 @@ const char 	*input_file_path 	= "../files/input_stream.txt";
 const size_t NUMBER_OF_PATTERNS = sizeof(pattern_list) / sizeof(char *);
 
 /**
+*	File consists of pattern list that are percieved threats for an IDS:
+*		1. Reverse shell code
+*		2. Reference to /bin/sh
+*		3. Any executable
+**/
+
+const char *pattern_list[] = {
+	// 1.
+	"bash -i >& /dev/tcp/",
+	"subprocess.call",
+	"sprintf",
+	"exec",
+	"nc",
+
+	// 2.
+	"/bin",
+	"/sh",
+
+	// 3.
+	".pl",
+	".php",
+	".py",
+	".sh"
+};
+
+/**
 * This function adds patterns to the initialized trie
 **/
 struct trie_node *add_patterns(struct trie_node *root) {
