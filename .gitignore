@@ -2,3 +2,5 @@ test/
 mpi/src/output
 mpi/bin
 mpi/obj
+cuda/bin
+cuda/obj
