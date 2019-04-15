@@ -1,4 +1,4 @@
-TARGET   = a.out
+TARGET   = pasm
 
 CC       = mpicc
 CFLAGS   = -std=c99 -Wall -I.

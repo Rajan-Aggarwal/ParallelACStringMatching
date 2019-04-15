@@ -1,4 +1,4 @@
-TARGET   = a.out
+TARGET   = pasm
 
 CC       = nvcc
 CFLAGS   = -std=c99 -Wall -I.
