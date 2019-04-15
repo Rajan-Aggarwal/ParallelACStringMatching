@@ -18,7 +18,27 @@
 
 #define MAX_INPUT_SZ 500
 
-const char 	*input_file_path 	= "../files/input_stream.txt";
+const char *input_file_path = "../files/input_stream.txt";
+
+const char *pattern_list[] = {
+	// 1.
+	"bash -i >& /dev/tcp/",
+	"subprocess.call",
+	"sprintf",
+	"exec",
+	"nc",
+
+	// 2.
+	"/bin",
+	"/sh",
+
+	// 3.
+	".pl",
+	".php",
+	".py",
+	".sh"
+};
+
 const size_t NUMBER_OF_PATTERNS = sizeof(pattern_list) / sizeof(char *);
 
 /**
