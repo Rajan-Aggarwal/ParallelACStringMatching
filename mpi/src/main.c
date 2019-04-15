@@ -21,7 +21,6 @@
 #define MAX_INPUT_SZ 500
 
 const char 	*input_file_path 	= "../files/input_stream.txt";
-const size_t NUMBER_OF_PATTERNS = sizeof(pattern_list) / sizeof(char *);
 
 /**
 *	File consists of pattern list that are percieved threats for an IDS:
@@ -48,6 +47,8 @@ const char *pattern_list[] = {
 	".py",
 	".sh"
 };
+
+const size_t NUMBER_OF_PATTERNS = sizeof(pattern_list) / sizeof(char *);
 
 /**
 * This function adds patterns to the initialized trie

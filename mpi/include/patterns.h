@@ -15,6 +15,6 @@
 *		3. Any executable
 **/
 
-extern const *pattern_list[];
+extern const char *pattern_list[];
 
 #endif /* __PATTERNS_H */
