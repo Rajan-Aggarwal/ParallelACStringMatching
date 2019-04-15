@@ -72,8 +72,8 @@ int main(int argc, char *argv[]) {
 	cudaMemcpy(d_input, input_buffer, sizeof(char) * ret, cudaMemcpyHostToDevice);
 
 	int len = strlen(input_buffer);
-	dim3 grid_size(NUMBER_OF_PATTERNS,1,1);
-	dim3 block_size(ret, 1, 1);
+	dim3 grid_size(ret,1,1);
+	dim3 block_size(NUMBER_OF_PATTERNS, 1, 1);
 	
 	detect_patterns<<<grid_size, block_size>>>(d_input, d_patterns, d_indices, d_matches, len);
 

@@ -13,8 +13,8 @@
 #include "../include/ac_str_match.h"
 
 __global__ void detect_patterns(char *input, char *patterns, int *indices, int *matches, int len) {
-	int start = threadIdx.x;
-	int idx = blockIdx.x;
+	int start = blockIdx.x;
+	int idx = threadIdx.x;
 
 	int beg = indices[idx], end = indices[idx+1];
 
